@@ -7,6 +7,8 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Register from './components/Register';
 import Footer from './components/Footer';
+import Profilepass from './components/Profilepass';
+import Viewpass from './components/Viewpass';
 
 const App = () => {
   const location = useLocation();
@@ -41,6 +43,14 @@ const router = createBrowserRouter([
       {
         path: '/home',
         element: <Home />
+      },
+      {
+        path: '/profilepass',
+        element: <Profilepass />
+      },
+      {
+        path: '/viewpass',
+        element: <Viewpass />
       }
     ]
   }
