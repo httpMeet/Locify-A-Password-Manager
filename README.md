@@ -29,4 +29,4 @@ Locify is a secure and intuitive password manager built with React, Tailwind CSS
 git clone https://github.com/httpMeet/Locify-A-Password-Manager.git
 cd Locify-A-Password-Manager
 npm install
-npm run dev
+npm run start
