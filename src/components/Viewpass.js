@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Viewpass = () => {
-  // In future, you can fetch real data via props, context, or API
   const passwordData = {
     website: 'Facebook',
     username: 'Meet Gandhi',
