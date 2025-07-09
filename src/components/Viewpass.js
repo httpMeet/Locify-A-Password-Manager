@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Viewpass = () => {
   // In future, you can fetch real data via props, context, or API
@@ -15,7 +16,7 @@ const Viewpass = () => {
           🔐 {passwordData.website}
         </h2>
 
-        <div className="space-y-4 text-gray-800">
+        <div className="space-y-4 text-gray-800 mb-6">
           <div className="flex justify-between">
             <span className="font-semibold">Username / Email:</span>
             <span>{passwordData.username}</span>
@@ -26,6 +27,12 @@ const Viewpass = () => {
             <span className="font-mono tracking-wide">{passwordData.password}</span>
           </div>
         </div>
+
+        <Link to="/home">
+          <button className="w-full bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700 transition duration-200">
+            ⬅ Back to Home
+          </button>
+        </Link>
       </div>
     </div>
   );
