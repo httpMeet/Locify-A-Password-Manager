@@ -9,6 +9,7 @@ import Register from './components/Register';
 import Footer from './components/Footer';
 import Profilepass from './components/Profilepass';
 import Viewpass from './components/Viewpass';
+import Addpass from './components/Addpass';
 
 const App = () => {
   const location = useLocation();
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
       {
         path: '/viewpass',
         element: <Viewpass />
+      },
+      {
+        path: '/addpass',
+        element: <Addpass />
       }
     ]
   }
