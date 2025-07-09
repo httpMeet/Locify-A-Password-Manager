@@ -6,7 +6,7 @@ const Login = () => {
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="bg-white p-8 rounded-2xl shadow-md w-full max-w-md">
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Login</h2>
-        <form className="space-y-4">
+        <form className="space-y-4" method='POST' action=''> 
           <div>
             <label htmlFor="email" className="block mb-1 text-sm font-medium text-gray-700">
               Email

@@ -7,7 +7,7 @@ const Profilepass = () => {
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="bg-white p-8 rounded-2xl shadow-md w-full max-w-md">
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Enter Profile Password</h2>
-        <form className="space-y-4">
+        <form className="space-y-4" method='POST' action=''>
           <div>
             <label htmlFor="ProfilePassword" className="block mb-2 text-sm font-medium text-gray-700">
               Profile Password

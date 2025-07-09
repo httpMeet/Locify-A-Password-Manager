@@ -7,7 +7,7 @@ const Addpass = () => {
 
       <div className="bg-white mt-8 p-8 rounded-2xl shadow-md w-full max-w-xl">
         <h2 className="text-2xl font-semibold mb-6 text-center text-gray-800">Save New Password</h2>
-        <form className="space-y-6">
+        <form className="space-y-6" method='POST' action=''>
           <div>
             <label htmlFor="website" className="block text-sm font-medium text-gray-700 mb-1">
               Website Name
