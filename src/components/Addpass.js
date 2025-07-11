@@ -14,8 +14,8 @@ const Addpass = () => {
             </label>
             <input
               type="text"
-              id="website"
-              name="website"
+              id="web_name"
+              name="web_name"
               placeholder="e.g. facebook.com"
               className="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
