@@ -10,10 +10,12 @@
   "author": "Gandhi Meet",
   "license": "ISC",
   "devDependencies": {
+    "buffer": "^6.0.3",
     "parcel": "^2.15.4"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.11",
+    "axios": "^1.10.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^6.22.3",
