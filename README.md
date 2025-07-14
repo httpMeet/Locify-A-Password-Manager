@@ -85,48 +85,6 @@ http://localhost/Locify/
     ##🛠 Create Database
         ###Create a database named: locify
 
-➕ Table 1: register
-Field	Type	Null	Key	Extra
-user_id	int(11)	NO	PRI	AUTO_INCREMENT
-name	varchar(30)	NO		
-email	varchar(50)	NO		
-contact	bigint(10)	NO		
-password	varchar(20)	NO		
-profile_password	varchar(20)	NO
-
-➕ Table 2: website
-Field	Type	Null	Key	Extra
-web_id	int(11)	NO	PRI	AUTO_INCREMENT
-web_name	varchar(100)	NO		
-username	varchar(20)	NO		
-password	varchar(20)	NO		
-reg_id	int(11)	NO
-
-✨ Folder Structure Overview
-Locify-A-Password-Manager/
-├── locify_backend/
-│   └── Locify/              # PHP backend files
-│       ├── login.php
-│       ├── register.php
-│       ├── add_website.php
-│       ├── home.php
-│       ├── profile_password.php
-│       └── connection.php
-├── src/
-│   ├── components/
-│   ├── pages/
-│       ├── Login.js
-│       ├── Register.js
-│       ├── Addpass.js
-│       ├── Home.js
-│       ├── Profilepass.js
-│       └── Viewpass.js
-│   ├── App.js
-│   └── index.js
-├── tailwind.config.js
-├── .postcssrc
-├── package.json
-└── README.md
 
 ✅ Future Enhancements
 🔐 Hashing passwords before storing in the database
