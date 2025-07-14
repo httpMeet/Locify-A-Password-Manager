@@ -49,7 +49,7 @@ const Home = () => {
                 {site.web_name}
               </h2>
               <Link to='/profilepass'>
-                <button className="bg-blue-600 text-white py-2 px-4 rounded-xl font-semibold shadow-sm hover:bg-blue-700 hover:shadow-lg transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2">
+                <button className="bg-blue-600 text-white py-2 px-4 rounded-xl font-semibold shadow-sm hover:bg-blue-700 hover:shadow-lg transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 cursor-pointer">
                   View Details
                 </button>
               </Link>
