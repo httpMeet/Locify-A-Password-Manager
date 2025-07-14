@@ -97,8 +97,9 @@ http://localhost/Locify/
 # Add Password Page
 <img width="1365" height="680" alt="image" src="https://github.com/user-attachments/assets/763e6a24-3675-4ec3-b5e2-b20d480c18df" />
 
-#Profile Password Page
+# Profile Password Page
 <img width="1360" height="679" alt="image" src="https://github.com/user-attachments/assets/3da01695-541b-43b0-922d-f251a86a36a4" />
+
 
 # ✅ Future Enhancements
 
