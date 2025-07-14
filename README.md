@@ -61,17 +61,17 @@ locify_backend/Locify/
 
 📂 Move it into your Web Server Directory:
 
-#for XAMP
+# for XAMP
 ```bash
 C:/xampp/htdocs/
 ```
 
-#for WAMP
+# for WAMP
 ```bash
 C:/wamp64/www/
 ```
 
-#for LAMP(Linux):
+# for LAMP(Linux):
 ```bash
 /var/www/html/
 ```
