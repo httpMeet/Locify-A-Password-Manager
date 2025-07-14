@@ -86,7 +86,8 @@ http://localhost/Locify/
         ###Create a database named: locify
 
 
-✅ Future Enhancements
+# ✅ Future Enhancements
+
 🔐 Hashing passwords before storing in the database
 
 📤 Backend deployment using hosting providers
