@@ -1,5 +1,6 @@
 <?php
 
+
 include 'connection.php';
 
 $data = json_decode(file_get_contents("php://input"), true);
@@ -13,8 +14,6 @@ $exe = $obj->query("INSERT INTO website(web_name, username, password, reg_id) VA
 
 if ($exe) {
     $inserted_id = $obj->insert_id;
-
-    // ✅ Use correct primary key: web_id
     $res = $obj->query("SELECT * FROM website WHERE web_id = '$inserted_id'");
     $row = $res->fetch_object();
 
