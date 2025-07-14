@@ -82,8 +82,8 @@ http://localhost/Locify/
 ```
 
 # 🧩 MySQL Database Setup
-    ##🛠 Create Database
-        ###Create a database named: locify
+    🛠 Create Database
+        Create a database named: locify
 
 
 # ✅ Future Enhancements
