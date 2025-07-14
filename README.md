@@ -85,6 +85,20 @@ http://localhost/Locify/
     🛠 Create Database
         Create a database named: locify
 
+# Login Page
+<img width="1365" height="680" alt="image" src="https://github.com/user-attachments/assets/2ce36598-f3df-497d-8462-31c8f78aa3be" />
+
+# Register Page
+<img width="1365" height="683" alt="image" src="https://github.com/user-attachments/assets/c66f3783-22d6-4ea0-91e8-de9325418a83" />
+
+# Home Page
+<img width="1365" height="673" alt="image" src="https://github.com/user-attachments/assets/5a7d1d6a-c26f-4208-9b4c-8b2eb5347661" />
+
+# Add Password Page
+<img width="1365" height="680" alt="image" src="https://github.com/user-attachments/assets/763e6a24-3675-4ec3-b5e2-b20d480c18df" />
+
+#Profile Password Page
+<img width="1360" height="679" alt="image" src="https://github.com/user-attachments/assets/3da01695-541b-43b0-922d-f251a86a36a4" />
 
 # ✅ Future Enhancements
 
