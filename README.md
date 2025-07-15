@@ -13,6 +13,7 @@ Locify is a secure and user-friendly password manager built with **React**, **Ta
 - 🎨 Styled with Tailwind CSS
 - ⚡ Fast Development Experience with Parcel
 - 📱 Fully Responsive Design
+- 🔐 Hashing passwords before storing in the database
 
 ---
 
@@ -100,10 +101,11 @@ http://localhost/Locify/
 # Profile Password Page
 <img width="1360" height="679" alt="image" src="https://github.com/user-attachments/assets/3da01695-541b-43b0-922d-f251a86a36a4" />
 
+# View Password Page
+<img width="1363" height="685" alt="image" src="https://github.com/user-attachments/assets/63684e63-efff-438d-8019-1a9666668e71" />
+
 
 # ✅ Future Enhancements
-
-🔐 Hashing passwords before storing in the database
 
 📤 Backend deployment using hosting providers
 
