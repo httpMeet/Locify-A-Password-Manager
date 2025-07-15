@@ -94,13 +94,13 @@ http://localhost/Locify/
 <img width="1365" height="683" alt="image" src="https://github.com/user-attachments/assets/c66f3783-22d6-4ea0-91e8-de9325418a83" />
 
 # Home Page
-<img width="1365" height="673" alt="image" src="https://github.com/user-attachments/assets/5a7d1d6a-c26f-4208-9b4c-8b2eb5347661" />
+<img width="1365" height="680" alt="image" src="https://github.com/user-attachments/assets/6d01973a-d8db-434e-9ba5-ad76cded51ce" />
 
-# Add Password Page
-<img width="1365" height="680" alt="image" src="https://github.com/user-attachments/assets/763e6a24-3675-4ec3-b5e2-b20d480c18df" />
+# Add Website Page
+<img width="1365" height="689" alt="image" src="https://github.com/user-attachments/assets/6a2a8ca4-6b04-4796-b640-67b3316c0da6" />
 
 # Profile Password Page
-<img width="1360" height="679" alt="image" src="https://github.com/user-attachments/assets/3da01695-541b-43b0-922d-f251a86a36a4" />
+<img width="1365" height="680" alt="image" src="https://github.com/user-attachments/assets/e0c0c3d2-8efd-4b92-8f6d-78938ebb86b2" />
 
 # View Password Page
 <img width="1365" height="681" alt="image" src="https://github.com/user-attachments/assets/930a029c-6131-4019-ba32-a9af66b0edb0" />
