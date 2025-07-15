@@ -102,7 +102,8 @@ http://localhost/Locify/
 <img width="1360" height="679" alt="image" src="https://github.com/user-attachments/assets/3da01695-541b-43b0-922d-f251a86a36a4" />
 
 # View Password Page
-<img width="1363" height="685" alt="image" src="https://github.com/user-attachments/assets/63684e63-efff-438d-8019-1a9666668e71" />
+<img width="1365" height="681" alt="image" src="https://github.com/user-attachments/assets/930a029c-6131-4019-ba32-a9af66b0edb0" />
+
 
 
 # ✅ Future Enhancements
