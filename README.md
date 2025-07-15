@@ -14,6 +14,7 @@ Locify is a secure and user-friendly password manager built with **React**, **Ta
 - ⚡ Fast Development Experience with Parcel
 - 📱 Fully Responsive Design
 - 🔐 Hashing passwords before storing in the database
+- 🔄 Password update & delete functionality
 
 ---
 
@@ -111,8 +112,6 @@ http://localhost/Locify/
 📤 Backend deployment using hosting providers
 
 📧 Email verification & OTP feature
-
-🔄 Password update & delete functionality
 
 🌙 Dark Mode support
 
