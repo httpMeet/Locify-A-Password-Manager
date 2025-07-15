@@ -1,13 +1,13 @@
 <?php
 
-
 include 'connection.php';
+include 'enc.php';
 
 $data = json_decode(file_get_contents("php://input"), true);
 
 $web_name = $data['webSiteName'];
 $username = $data['username'];
-$password = $data['password'];
+$password = encryptString($data['password'], $secretkey); // ✅ fixed function name
 $reg_id = $data['id'];
 
 $exe = $obj->query("INSERT INTO website(web_name, username, password, reg_id) VALUES('$web_name', '$username', '$password', '$reg_id')");

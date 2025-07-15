@@ -12,7 +12,7 @@ const Header = () => {
           Home
         </Link>
         <Link to="/addpass" className="ml-6 text-gray-700 hover:text-blue-600 text-lg font-medium">
-          Add Passwords
+          Add Website
         </Link>
         <Link to="/login" className="ml-6 text-gray-700 hover:text-blue-600 text-lg font-medium">
           Logout
