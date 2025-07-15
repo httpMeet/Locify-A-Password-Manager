@@ -46,11 +46,11 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: '/profilepass',
+        path: '/profilepass/:web_id/:user_id',
         element: <Profilepass />
       },
       {
-        path: '/viewpass',
+        path: '/viewpass/:web_id/:user_id',
         element: <Viewpass />
       },
       {

@@ -1,22 +1,25 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 
 const Profilepass = () => {
   const [profilePassword, setProfilePassword] = useState('');
   const navigate = useNavigate();
+  const { web_id, user_id } = useParams();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const id = localStorage.getItem("user_id");
-    const formData = {id,profilePassword}
+    const formData = {
+      id: user_id,
+      profilePassword
+    };
 
     try {
       const response = await axios.post("http://localhost/locify/profile_password.php", formData);
 
       if (response.data.user) {
-        navigate('/viewpass');
+        navigate(`/viewpass/${web_id}/${user_id}`);
       } else {
         alert("Invalid Profile Password");
       }

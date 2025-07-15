@@ -9,7 +9,6 @@ const Home = () => {
     const fetchWebsites = async () => {
       try {
         const reg_id = localStorage.getItem("user_id");
-
         const data = { reg_id };
 
         const response = await axios.post("http://localhost/locify/home.php", data, {
@@ -48,7 +47,7 @@ const Home = () => {
               <h2 className="text-xl font-semibold text-gray-800 mb-4">
                 {site.web_name}
               </h2>
-              <Link to='/profilepass'>
+              <Link to={`/profilepass/${site.web_id}/${site.reg_id}`}>
                 <button className="bg-blue-600 text-white py-2 px-4 rounded-xl font-semibold shadow-sm hover:bg-blue-700 hover:shadow-lg transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 cursor-pointer">
                   View Details
                 </button>

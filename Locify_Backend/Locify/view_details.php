@@ -2,8 +2,10 @@
 
     include 'connection.php';
 
-    $reg_id = $_POST["reg_id"];
-    $wid = $_POST["wid"];
+    $data = json_decode(file_get_contents("php://input"), true);
+
+    $reg_id = $data["reg_id"];
+    $wid = $data["wid"];
 
     $result = $obj->query("select * from website where reg_id='$reg_id' and web_id='$wid'");
 
