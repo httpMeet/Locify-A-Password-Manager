@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import Profilepass from './components/Profilepass';
 import Viewpass from './components/Viewpass';
 import Addpass from './components/Addpass';
+import Error from './components/Error';
 
 export const ThemeContext = createContext(null);
 
@@ -66,8 +67,10 @@ const router = createBrowserRouter([
         path: '/addpass',
         element: <Addpass />
       }
-    ]
-  }
+    ],
+    errorElement: <Error />
+  },
+  
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
