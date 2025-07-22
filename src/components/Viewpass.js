@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { ThemeContext } from '../App';
 
 const Viewpass = () => {
   const { web_id, user_id } = useParams();
@@ -8,8 +9,8 @@ const Viewpass = () => {
   const [loading, setLoading] = useState(true);
   const [copyStatus, setCopyStatus] = useState("idle");
   const [actionLoading, setActionLoading] = useState(false);
-
   const navigate = useNavigate();
+  const { theme } = useContext(ThemeContext);
 
   useEffect(() => {
     const fetchDetails = async () => {
@@ -114,15 +115,15 @@ const Viewpass = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-100">
-        <p className="text-lg text-gray-600">Loading...</p>
+      <div className={`min-h-screen flex items-center justify-center ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'}`}>
+        <p className={`text-lg ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>Loading...</p>
       </div>
     );
   }
 
   if (!passwordData) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className={`min-h-screen flex items-center justify-center ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'}`}>
         <p className="text-lg text-red-500">
           No data found or an error occurred.
         </p>
@@ -131,13 +132,13 @@ const Viewpass = () => {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100 px-4">
-      <div className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md">
-        <h2 className="text-2xl font-bold text-blue-700 mb-6 text-center">
+    <div className={`flex items-center justify-center min-h-screen px-4 ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'}`}>
+      <div className={`p-8 rounded-2xl shadow-xl w-full max-w-md ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
+        <h2 className="text-2xl font-bold text-blue-700 mb-6 text-center dark:text-blue-500">
           🔐 {passwordData.web_name}
         </h2>
 
-        <div className="space-y-4 text-gray-800 mb-6">
+        <div className={`space-y-4 mb-6 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-800'}`}>
           <div className="flex justify-between">
             <span className="font-semibold">Username / Email:</span>
             <span>{passwordData.username}</span>
@@ -158,7 +159,7 @@ const Viewpass = () => {
                 ${
                   copyStatus === "copied"
                     ? "bg-green-500 text-white"
-                    : "bg-gray-200 hover:bg-gray-300"
+                    : theme === 'dark' ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'
                 }`}
               title="Copy to clipboard"
             >

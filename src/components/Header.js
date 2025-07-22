@@ -1,22 +1,65 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import ReactSwitch from 'react-switch';
+import { ThemeContext } from '../App'; 
 
 const Header = () => {
+
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
+  const SunIcon = () => (
+    <div className="flex justify-center items-center h-full">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+    </div>
+  );
+
+  const MoonIcon = () => (
+    <div className="flex justify-center items-center h-full">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+    </div>
+  );
+
   return (
-    <header className="flex items-center justify-between px-6 py-6 bg-white shadow-md">
+    <header className="flex items-center justify-between px-6 py-4 bg-white dark:bg-gray-800 shadow-md">
       <div className="flex items-center space-x-3">
-        <span className="text-xl font-bold text-gray-800">Locify-Password Manager</span>
+        <span className="text-xl font-bold text-gray-800 dark:text-white">Locify-Password Manager</span>
       </div>
-      <nav>
-        <Link to="/home" className="text-gray-700 hover:text-blue-600 text-lg font-medium">
+      <nav className="flex items-center space-x-6">
+        <Link to="/home" className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 text-lg font-medium">
           Home
         </Link>
-        <Link to="/addpass" className="ml-6 text-gray-700 hover:text-blue-600 text-lg font-medium">
+        <Link to="/addpass" className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 text-lg font-medium">
           Add Website
         </Link>
-        <Link to="/login" className="ml-6 text-gray-700 hover:text-blue-600 text-lg font-medium">
+        <Link to="/login" className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 text-lg font-medium">
           Logout
         </Link>
+        <div className="flex items-center">
+          <ReactSwitch
+            onChange={toggleTheme}
+            checked={theme === 'dark'}
+            onColor="#4F46E5"
+            offColor="#FBBF24"
+            checkedIcon={<MoonIcon />}
+            uncheckedIcon={<SunIcon />}
+            height={28}
+            width={56}
+            handleDiameter={24}
+            activeBoxShadow="0 0 2px 3px #3B82F6"
+          />
+        </div>
       </nav>
     </header>
   );

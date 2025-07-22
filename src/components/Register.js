@@ -1,8 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { ThemeContext } from '../App';
 
 const Register = () => {
     const [Name, setName] = useState("")
@@ -11,14 +10,14 @@ const Register = () => {
     const [Password, setPassword] = useState("")
     const [ConfirmPassword, setConfirmPassword] = useState("")
     const [ProfilePassword, setProfilePassword] = useState("")
-
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    const { theme } = useContext(ThemeContext);
 
     const submitHandler = async (e) => {
         e.preventDefault()
         const data = { Name, Email, Contact, Password, ConfirmPassword, ProfilePassword }
 
-        if (Password == ConfirmPassword) {
+        if (Password === ConfirmPassword) {
             try {
                 const response = await axios.post("http://localhost/locify/register.php", data, {
                     headers: {
@@ -40,11 +39,11 @@ const Register = () => {
     }
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-100">
-            <div className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md mt-4 mb-10">
-                <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Register</h2>
+        <div className={`flex items-center justify-center min-h-screen ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'}`}>
+            <div className={`p-8 rounded-2xl shadow-lg w-full max-w-md mt-4 mb-10 ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
+                <h2 className={`text-2xl font-bold mb-6 text-center ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>Register</h2>
                 <form onSubmit={submitHandler}>
-                    <label htmlFor="Name" className="block mb-1 text-sm font-medium text-gray-700">
+                    <label htmlFor="Name" className={`block mb-1 text-sm font-medium ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                         Full Name
                     </label>
                     <input
@@ -54,10 +53,10 @@ const Register = () => {
                         name="name"
                         value={Name}
                         onChange={(e) => setName(e.target.value)}
-                        className="w-full p-3 mb-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className={`w-full p-3 mb-3 border rounded-xl focus:outline-none focus:ring-2 ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white focus:ring-blue-500' : 'border-gray-300 focus:ring-blue-500'}`}
                         required
                     />
-                    <label htmlFor="Email" className="block mb-1 text-sm font-medium text-gray-700">
+                    <label htmlFor="Email" className={`block mb-1 text-sm font-medium ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                         Email
                     </label>
                     <input
@@ -67,10 +66,10 @@ const Register = () => {
                         name="email"
                         value={Email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="w-full p-3 mb-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className={`w-full p-3 mb-3 border rounded-xl focus:outline-none focus:ring-2 ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white focus:ring-blue-500' : 'border-gray-300 focus:ring-blue-500'}`}
                         required
                     />
-                    <label htmlFor="Contact" className="block mb-1 text-sm font-medium text-gray-700">
+                    <label htmlFor="Contact" className={`block mb-1 text-sm font-medium ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                         Contact Number
                     </label>
                     <input
@@ -80,10 +79,10 @@ const Register = () => {
                         name="contact"
                         value={Contact}
                         onChange={(e) => setContact(e.target.value)}
-                        className="w-full p-3 mb-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className={`w-full p-3 mb-3 border rounded-xl focus:outline-none focus:ring-2 ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white focus:ring-blue-500' : 'border-gray-300 focus:ring-blue-500'}`}
                         required
                     />
-                    <label htmlFor="Password" className="block mb-1 text-sm font-medium text-gray-700">
+                    <label htmlFor="Password" className={`block mb-1 text-sm font-medium ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                         Password
                     </label>
                     <input
@@ -93,10 +92,10 @@ const Register = () => {
                         name="password"
                         value={Password}
                         onChange={(e) => setPassword(e.target.value)}
-                        className="w-full p-3 mb-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className={`w-full p-3 mb-3 border rounded-xl focus:outline-none focus:ring-2 ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white focus:ring-blue-500' : 'border-gray-300 focus:ring-blue-500'}`}
                         required
                     />
-                    <label htmlFor="Confirm Password" className="block mb-1 text-sm font-medium text-gray-700">
+                    <label htmlFor="Confirm Password" className={`block mb-1 text-sm font-medium ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                         Confirm Password
                     </label>
                     <input
@@ -106,10 +105,10 @@ const Register = () => {
                         name="confirmPassword"
                         value={ConfirmPassword}
                         onChange={(e) => setConfirmPassword(e.target.value)}
-                        className="w-full p-3 mb-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className={`w-full p-3 mb-3 border rounded-xl focus:outline-none focus:ring-2 ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white focus:ring-blue-500' : 'border-gray-300 focus:ring-blue-500'}`}
                         required
                     />
-                    <label htmlFor="ProfilePassword" className="block mb-1 text-sm font-medium text-gray-700">
+                    <label htmlFor="ProfilePassword" className={`block mb-1 text-sm font-medium ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                         Profile Password
                     </label>
                     <input
@@ -119,7 +118,7 @@ const Register = () => {
                         name="profile_password"
                         value={ProfilePassword}
                         onChange={(e) => setProfilePassword(e.target.value)}
-                        className="w-full p-3 mb-5 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className={`w-full p-3 mb-5 border rounded-xl focus:outline-none focus:ring-2 ${theme === 'dark' ? 'bg-gray-700 border-gray-600 text-white focus:ring-blue-500' : 'border-gray-300 focus:ring-blue-500'}`}
                         required
                     />
                     <button
@@ -129,9 +128,9 @@ const Register = () => {
                         Register
                     </button>
                 </form>
-                <p className="mt-4 text-center text-sm text-gray-600">
+                <p className={`mt-4 text-center text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                     Already have an account?{' '}
-                    <Link to="/login" className="text-blue-600 hover:underline font-medium">
+                    <Link to="/login" className="text-blue-600 hover:underline font-medium dark:text-blue-400">
                         Login here
                     </Link>
                 </p>

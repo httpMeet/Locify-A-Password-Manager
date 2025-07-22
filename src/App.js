@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, createContext } from 'react';
 import ReactDOM from 'react-dom/client';
 import { Outlet, useLocation } from 'react-router-dom';
 import Header from './components/Header';
@@ -11,16 +11,25 @@ import Profilepass from './components/Profilepass';
 import Viewpass from './components/Viewpass';
 import Addpass from './components/Addpass';
 
+export const ThemeContext = createContext(null);
+
 const App = () => {
   const location = useLocation();
   const hideHeaderRoutes = ['/login', '/register'];
+  const [theme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  };
 
   return (
-    <div className="App">
-      {!hideHeaderRoutes.includes(location.pathname) && <Header />}
-      <Outlet />
-      {!hideHeaderRoutes.includes(location.pathname) && <Footer />}
-    </div>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <div className="App" id={theme}>
+        {!hideHeaderRoutes.includes(location.pathname) && <Header />}
+        <Outlet />
+        {!hideHeaderRoutes.includes(location.pathname) && <Footer />}
+      </div>
+    </ThemeContext.Provider>
   );
 };
 
