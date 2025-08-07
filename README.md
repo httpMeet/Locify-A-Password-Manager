@@ -89,23 +89,22 @@ http://localhost/Locify/
         Create a database named: locify
 
 # Login Page
-<img width="1365" height="680" alt="image" src="https://github.com/user-attachments/assets/2ce36598-f3df-497d-8462-31c8f78aa3be" />
+<img width="1365" height="684" alt="image" src="https://github.com/user-attachments/assets/d6025961-e8e8-4d94-84f6-f4d45084f6e3" />
 
 # Register Page
-<img width="1365" height="683" alt="image" src="https://github.com/user-attachments/assets/c66f3783-22d6-4ea0-91e8-de9325418a83" />
+<img width="1348" height="685" alt="image" src="https://github.com/user-attachments/assets/0dc961f8-e973-46f0-a265-109c1e1d8e42" />
 
 # Home Page
-<img width="1365" height="680" alt="image" src="https://github.com/user-attachments/assets/6d01973a-d8db-434e-9ba5-ad76cded51ce" />
+<img width="1350" height="681" alt="image" src="https://github.com/user-attachments/assets/010f092a-0da1-481e-a5ab-13ad4ca0972e" />
 
 # Add Website Page
-<img width="1365" height="689" alt="image" src="https://github.com/user-attachments/assets/6a2a8ca4-6b04-4796-b640-67b3316c0da6" />
+<img width="1348" height="674" alt="image" src="https://github.com/user-attachments/assets/f2b3b027-b2bf-48d1-920d-c44d48a6ff9a" />
 
 # Profile Password Page
-<img width="1365" height="680" alt="image" src="https://github.com/user-attachments/assets/e0c0c3d2-8efd-4b92-8f6d-78938ebb86b2" />
+<img width="1350" height="684" alt="image" src="https://github.com/user-attachments/assets/570074a5-5028-4494-ad4a-6e8649953d25" />
 
 # View Password Page
-<img width="1365" height="681" alt="image" src="https://github.com/user-attachments/assets/930a029c-6131-4019-ba32-a9af66b0edb0" />
-
+<img width="1345" height="687" alt="image" src="https://github.com/user-attachments/assets/e285d2ca-f218-45dc-bf4c-8a672e50ac9e" />
 
 
 # ✅ Future Enhancements
